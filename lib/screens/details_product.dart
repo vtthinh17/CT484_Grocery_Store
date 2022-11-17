@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import '../utils/routes.dart';
 import '../utils/models.dart';
-import '../utils/ui.dart';
 
 class DetailsProductScreen extends StatefulWidget {
   final Product productDataModel;
@@ -100,8 +98,8 @@ class _DetailsProductScreenState extends State<DetailsProductScreen> {
             width: 300,
             child: ElevatedButton(
               onPressed: () {
-              
-                // addItemToCart
+                // addItemToCart handler?
+
                 // cartItemsList.add(widget.productDataModel);
                 // for(int i=0; i<itemCount;i++){
                 //   cartItemsList.add(widget.productDataModel);
@@ -114,7 +112,7 @@ class _DetailsProductScreenState extends State<DetailsProductScreen> {
                   action: SnackBarAction(
                     label: 'Undo',
                     onPressed: () {
-                      //  removeItemFromCart
+                      //  removeItemFromCart handler?
                       ScaffoldMessenger.of(context).hideCurrentSnackBar();
                     },
                   ),

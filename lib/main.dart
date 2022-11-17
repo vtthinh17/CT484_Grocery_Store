@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:grocery_app/screens/details_product.dart';
 import 'utils/ui.dart';
 import 'utils/routes.dart';
 void main() {

@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:grocery_app/screens/details_product.dart';
 import '../utils/ui.dart';
 import '../utils/routes.dart';
 import '../utils/models.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
 class HomeScreen extends StatefulWidget {
-  HomeScreen({Key? key}) : super(key: key);
+  const HomeScreen({Key? key}) : super(key: key);
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();

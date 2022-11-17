@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../utils/models.dart';
+import '../widgets/cart_item.dart';
 
 class CartScreen extends StatelessWidget {
   const CartScreen({Key? key}) : super(key: key);
@@ -32,17 +33,14 @@ class CartScreen extends StatelessWidget {
         children: [
           Container(
             margin: const EdgeInsets.symmetric(vertical: 16),
-            // child: ListView.separated(
-            //   separatorBuilder: (context, index) {
-            //     return Divider();
-            //   },
-            //   itemCount: cartItemList.length,
-            //   itemBuilder: (context, index) {
-            //     return Text(
-            //       cartItemsList[index].name
-            //     );
-            //   },
-            // ),
+           child: ListView.builder(
+            itemCount: CartItemModel.cartItemList.length,
+            itemBuilder: (context, index) {
+                return CartItem(
+                  item: CartItemModel.cartItemList[index],
+                );
+              },
+            ),
           ),
 
 
@@ -55,7 +53,9 @@ class CartScreen extends StatelessWidget {
               FractionallySizedBox(
                 widthFactor: 1,
                 child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      // Checkout handler
+                    },
                     style: TextButton.styleFrom(
                       padding: const EdgeInsets.symmetric(vertical: 16),
                       textStyle:
@@ -70,15 +70,6 @@ class CartScreen extends StatelessWidget {
           )
         ],
       ),
-    );
-  }
-
-  Widget buildCartDetails( ){
-    return ListView(
-       
-       
-         
-       
     );
   }
 }
